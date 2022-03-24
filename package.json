@@ -1,0 +1,32 @@
+{
+  "name": "contacts-app",
+  "version": "1.0.0",
+  "description": "application for improve skills as a backend developer",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rm -rf dist/",
+    "build": "mkdir dist && babel src/ -d dist",
+    "start": "npm run build && nodemon dist/startup.js",
+    "dev": "nodemon --exec babel-node startup.js",
+    "test": "nodemon --exec babel-node src/config/environments/index.js",
+    "test2": "nodemon --exec babel-node src/config/server.js"
+  },
+  "keywords": [
+    "nodejs"
+  ],
+  "author": "Nelson Rivas",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.5",
+    "@babel/node": "^7.16.8",
+    "@babel/preset-env": "^7.16.11",
+    "babel-plugin-root-import": "^6.6.0",
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "morgan": "^1.10.0"
+  }
+}
