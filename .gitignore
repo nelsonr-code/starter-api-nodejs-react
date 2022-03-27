@@ -1,3 +1,4 @@
 node_modules
 .env
 src/config/environments/prod.js
+src/config/contacts-app-firebase-adminsdk.json
