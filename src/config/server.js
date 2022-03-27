@@ -10,7 +10,6 @@ class Server {
     constructor() {
         this._app = null;
         this._server = null;
-        this._express = express();
     }
 
     static get appPort() {
