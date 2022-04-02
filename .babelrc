@@ -13,8 +13,18 @@
     "@babel/plugin-proposal-object-rest-spread",
     [
       "babel-plugin-root-import", {
-        "rootPathSuffix": "./src/",
-        "rootPathPrefix": "~/"
+        "paths": [
+          {
+  
+            "rootPathSuffix": "./src/",
+            "rootPathPrefix": "~/"
+          },
+          {
+            "rootPathSuffix": "./client-app/src/",
+            "rootPathPrefix": "client/"
+          }
+
+        ]
       }
     ]
   ]
