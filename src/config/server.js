@@ -2,6 +2,7 @@ import express from "express";
 import currentEnv from "~/config/environments";
 import middlewares from "~/middlewares";
 import Routes from "~/api/routes";
+// import indexHTML from "client/index.html";
 
 const { PORT, DB } = currentEnv;
 
@@ -43,7 +44,8 @@ class Server {
     start() {
         this.init();
         this.setMiddlewares();
-        this.setRoutes('/', Routes);
+        this.setApiRoutes('/', Routes);
+        this.setClientRoutes();
 
         return new Promise((resolve, reject) => {
             const http = this._app.listen(Server.appPort, () => {
@@ -56,8 +58,13 @@ class Server {
         })
     }
 
-    setRoutes(baseUrl, router) {
+    setApiRoutes(baseUrl, router) {
         this.app().use(baseUrl, router);
+    }
+
+    setClientRoutes() {
+        this.app().use('/', express.static(process.cwd() + '/client-app/'))
+        this.app().use('/*', express.static(process.cwd() + '/client-app/'))
     }
 }
 
