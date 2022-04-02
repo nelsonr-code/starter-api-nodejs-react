@@ -2,7 +2,7 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const DEV_CONFIG = {
-    PORT: 4000,
+    PORT: 5000,
     DB: {
         name: "contacts_dev",
         user: "local",
