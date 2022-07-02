@@ -1,6 +1,6 @@
-import { Router } from "express";
-import TestRouter from "./testRouter";
-import ContactRouter from "~/api/components/contact.routes";
+import { Router } from 'express';
+import TestRouter from './testRouter';
+import ContactRouter from '~/api/components/contact.routes';
 
 const Routes = Router();
 
