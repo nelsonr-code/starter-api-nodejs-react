@@ -5,9 +5,9 @@ import ContactRouter from '~/api/components/contact.routes';
 const Routes = Router();
 
 // Routes.use('/test', TestRouter);
-Routes.use('/test', TestRouter);
+Routes.use('/', TestRouter);
 
 // contacts
-Routes.use('/', ContactRouter);
+// Routes.use('/', ContactRouter);
 
 export default Routes;
