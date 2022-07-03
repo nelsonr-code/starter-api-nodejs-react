@@ -2,14 +2,12 @@
   "name": "contacts-app",
   "version": "1.0.0",
   "description": "application for improve skills as a backend developer",
-  "main": "index.js",
+  "main": "startup.js",
   "scripts": {
-    "clean": "rm -rf dist/",
+    "start": "node dist/startup.js",
     "build": "mkdir dist && babel src/ -d dist",
-    "start": "npm run build && nodemon dist/startup.js",
     "dev": "nodemon --exec babel-node startup.js",
-    "test": "nodemon --exec babel-node src/config/environments/index.js",
-    "test2": "nodemon --exec babel-node src/config/server.js"
+    "clean": "rm -rf dist/"
   },
   "keywords": [
     "nodejs"
